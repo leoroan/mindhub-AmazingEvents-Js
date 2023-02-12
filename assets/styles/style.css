@@ -1,0 +1,16 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.carousel {
+  background-color: beige;
+}
+
+.carousel-item p {
+  font-size: 50px;
+  font-style: italic;
+}
+
+.bi {
+  font-size: 1.5rem;
+}
