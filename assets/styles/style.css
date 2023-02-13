@@ -4,11 +4,11 @@
 
 a {
   text-decoration:none;
-  color: black;
+  color: #e0046c;
 }
 
 .carousel {
-  background-color: beige;
+  background-color: beige !important;
 }
 
 .carousel-item p {
@@ -18,4 +18,13 @@ a {
 
 .bi {
   font-size: 1.5rem;
+  color: #e0046c;
+}
+
+.btn-outline-danger{
+  color: #e0046c !important;  
+}
+
+body {
+  background-color: azure;
 }
