@@ -2,6 +2,11 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+a {
+  text-decoration:none;
+  color: black;
+}
+
 .carousel {
   background-color: beige;
 }
