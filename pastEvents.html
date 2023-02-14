@@ -13,7 +13,8 @@
 </head>
 
 <body>
-  <nav class="navbar sticky-top navbar-expand-lg border">
+   <!-- NAV BAR -->
+   <nav class="navbar sticky-top navbar-expand-lg ">
     <div class="container-fluid">
       <a class="navbar-brand" href="./home.html"><img class="img-fluid w-25" src="./assets/img/Logo_Amazing_Events.png "
           alt="Amazing_Events_logo"></a>
@@ -23,21 +24,23 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end text-nowrap" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./home.html" role="button">Home
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./home.html"
+            role="button">Home
           </a>
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./upcomingEvets.html"
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./upcomingEvets.html"
             role="button">Upcoming-Events
           </a>
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./pastEvents.html"
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./pastEvents.html"
             role="button">Past-Events
           </a>
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./contact.html" role="button">
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./contact.html"
+            role="button">
             Contact
           </a>
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./stats.html"
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./stats.html"
             role="button">Stats
           </a>
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./details.html"
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./details.html"
             role="button">Details
           </a>
         </div>
@@ -45,8 +48,9 @@
     </div>
   </nav>
 
+  <!-- CAROUSEL -->
   <div id="maincarousel" class="carousel carousel-dark slide"> <!--deprecated -->
-    <div class="carousel-inner h-25">
+    <div class="carousel-inner h-25 shadow">
       <div class="carousel-item text-center p-4">
         <a href="./home.html">
           <p>Home</p>
@@ -88,14 +92,116 @@
     </button>
   </div>
 
-  <section class="container-fluid">
-    <h1> Here comes a lorem from Past</h1>
+  <!-- SUB BAR -->
+  <div class="container">
+    <div class="row my-3">
+      <div class="col-8">
+        <form class="my-2 mx-2 py-2">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox_cat1" value="option1">
+            <label class="form-check-label text-nowrap" for="inlineCheckbox_cat1">Category 1</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox_cat2" value="option2">
+            <label class="form-check-label text-nowrap" for="inlineCheckbox_cat2">Category 2</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox_cat3" value="option3">
+            <label class="form-check-label text-nowrap" for="inlineCheckbox_cat3">Category 3</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox_cat4" value="option4">
+            <label class="form-check-label text-nowrap" for="inlineCheckbox_cat4">Category 4</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox_cat5" value="option5">
+            <label class="form-check-label text-nowrap" for="inlineCheckbox_cat5">Category 5</label>
+          </div>
+        </form>
+      </div>
+      <div class="col">
+        <div class="input-group my-2 mx-2 py-2 pe-5 ">
+          <input type="text" class="form-control shadow">
+          <button class="btn btn-outline-secondary shadow" type="button" id="button-search1"><i
+              class="bi bi-search "></i></button>
+        </div>
+      </div>
+    </div>
 
-    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus aliquid consequatur similique dolor? Suscipit
-      odit animi ullam maxime error eius deserunt ad, deleniti id aspernatur. Quasi ipsa neque reprehenderit iste!
-    </p>
+    <!-- CARDS -->
+    <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-4">
+      <div class="col">
+        <div class="card text-center shadow">
+          <img src="./assets/img/Cinema.jpg" class="card-img-top shadow" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Título</h5>
+            <p class="card-text">Texto descriptivo.</p>
+            <div class="d-flex justify-content-around align-items-baseline text-nowrap">
+              <p class="text-center mx-2">Price $000</p>
+              <a href="#" class="btn btn-sm btn-secondary shadow ">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  </section>
+      <div class="col">
+        <div class="card text-center shadow">
+          <img src="./assets/img/Cinema.jpg" class="card-img-top shadow" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Título</h5>
+            <p class="card-text">Texto descriptivo.</p>
+            <div class="d-flex justify-content-around align-items-baseline text-nowrap">
+              <p class="text-center mx-2">Price $000</p>
+              <a href="#" class="btn btn-sm btn-secondary shadow ">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card text-center shadow">
+          <img src="./assets/img/Cinema.jpg" class="card-img-top shadow" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Título</h5>
+            <p class="card-text">Texto descriptivo.</p>
+            <div class="d-flex justify-content-around align-items-baseline text-nowrap">
+              <p class="text-center mx-2">Price $000</p>
+              <a href="#" class="btn btn-sm btn-secondary shadow ">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card text-center shadow">
+          <img src="./assets/img/Cinema.jpg" class="card-img-top shadow" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Título</h5>
+            <p class="card-text">Texto descriptivo.</p>
+            <div class="d-flex justify-content-around align-items-baseline text-nowrap">
+              <p class="text-center mx-2">Price $000</p>
+              <a href="#" class="btn btn-sm btn-secondary shadow ">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card text-center shadow">
+          <img src="./assets/img/Cinema.jpg" class="card-img-top shadow" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Título</h5>
+            <p class="card-text">Texto descriptivo.</p>
+            <div class="d-flex justify-content-around align-items-baseline text-nowrap">
+              <p class="text-center mx-2">Price $000</p>
+              <a href="#" class="btn btn-sm btn-secondary shadow ">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <footer class="d-flex flex-row-reverse">
     <nav class="navbar fixed-bottom bg-body-tertiary border px-4">
