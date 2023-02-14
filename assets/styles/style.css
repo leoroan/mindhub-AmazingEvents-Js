@@ -61,3 +61,11 @@ body {
 .form-check-input {
   border-color: #e0046c;
 }
+
+th {
+  background-color: #e0046c !important;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-color: #e0046c;
+}
