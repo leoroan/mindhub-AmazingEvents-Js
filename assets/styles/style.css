@@ -22,9 +22,38 @@ footer .bi {
 }
 
 .btn-outline-danger{
-  color: #e0046c !important;  
+  color: white !important;  
+  
+  
 }
 
 body {
   background-color: azure;
+}
+
+.btn-outline-danger:hover{
+  background-color: pink;
+  opacity: 0.3;
+}
+
+.btn {
+  background-color: #e0046c !important;
+  border-color: #e0046c !important;
+}
+
+.card {
+  border-color: #e0046c;
+}
+
+.row {
+  margin: 50px 0 50px 0;
+
+}
+
+.form-control {
+  border-color: #e0046c;
+}
+
+.bi-search{
+  color: white;
 }
