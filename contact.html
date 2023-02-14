@@ -13,7 +13,8 @@
 </head>
 
 <body>
-  <nav class="navbar sticky-top navbar-expand-lg border">
+  <!-- NAV BAR -->
+  <nav class="navbar sticky-top navbar-expand-lg ">
     <div class="container-fluid">
       <a class="navbar-brand" href="./home.html"><img class="img-fluid w-25" src="./assets/img/Logo_Amazing_Events.png "
           alt="Amazing_Events_logo"></a>
@@ -23,21 +24,23 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end text-nowrap" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./home.html" role="button">Home
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./home.html"
+            role="button">Home
           </a>
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./upcomingEvets.html"
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./upcomingEvets.html"
             role="button">Upcoming-Events
           </a>
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./pastEvents.html"
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./pastEvents.html"
             role="button">Past-Events
           </a>
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./contact.html" role="button">
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./contact.html"
+            role="button">
             Contact
           </a>
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./stats.html"
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./stats.html"
             role="button">Stats
           </a>
-          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2" href="./details.html"
+          <a class="btn btn-outline-danger m-1 border-top-0 border-end-0 border-2 shadow" href="./details.html"
             role="button">Details
           </a>
         </div>
@@ -45,8 +48,9 @@
     </div>
   </nav>
 
+  <!-- CAROUSEL -->
   <div id="maincarousel" class="carousel carousel-dark slide"> <!--deprecated -->
-    <div class="carousel-inner h-25">
+    <div class="carousel-inner h-25 shadow">
       <div class="carousel-item text-center p-4">
         <a href="./home.html">
           <p>Home</p>
@@ -64,7 +68,7 @@
       </div>
       <div class="carousel-item active text-center p-4">
         <a href="./contact.html">
-          <p>Contact</p>
+          <p>Contact Us</p>
         </a>
       </div>
       <div class="carousel-item text-center p-4">
@@ -88,34 +92,83 @@
     </button>
   </div>
 
-  <section class="container-fluid">
-    <h1> Here comes a lorem from Contact</h1>
-
-    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus aliquid consequatur similique dolor? Suscipit
-      odit animi ullam maxime error eius deserunt ad, deleniti id aspernatur. Quasi ipsa neque reprehenderit iste!
-    </p>
-
-  </section>
-
-  <footer class="d-flex flex-row-reverse">
-    <nav class="navbar fixed-bottom bg-body-tertiary border px-4">
-      <div>
-        <i class="bi bi-instagram m-2"></i>
-        <i class="bi bi-facebook m-2"></i>
-        <i class="bi bi-whatsapp m-2"></i>
+  <!-- SUB BAR -->
+  <div class="container">
+    <div class="row my-3">
+      <div class="col-8">
+        <form class="my-2 mx-2 py-2">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox_cat1" value="option1">
+            <label class="form-check-label text-nowrap" for="inlineCheckbox_cat1">Category 1</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox_cat2" value="option2">
+            <label class="form-check-label text-nowrap" for="inlineCheckbox_cat2">Category 2</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox_cat3" value="option3">
+            <label class="form-check-label text-nowrap" for="inlineCheckbox_cat3">Category 3</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox_cat4" value="option4">
+            <label class="form-check-label text-nowrap" for="inlineCheckbox_cat4">Category 4</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox_cat5" value="option5">
+            <label class="form-check-label text-nowrap" for="inlineCheckbox_cat5">Category 5</label>
+          </div>
+        </form>
       </div>
-    </nav>
-    <div class="fixed-bottom px-3 fs-4">
-      <p class=" d-flex flex-row-reverse">
-        Cohort
-      </p>
+      <div class="col">
+        <div class="input-group my-2 mx-2 py-2 pe-5 ">
+          <input type="text" class="form-control shadow">
+          <button class="btn btn-outline-secondary shadow" type="button" id="button-search1"><i
+              class="bi bi-search "></i></button>
+        </div>
+      </div>
     </div>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <script src="./script.js"></script>
+    <section class="d-flex justify-content-center my-5">
+      <div class="w-50">
+        <div class="mb-3">
+          <label for="exampleFormControlInput3" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="your name">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="type your message"></textarea>
+        </div>
+        <div class="text-center">
+          <input class="btn btn-primary" type="submit" value="Submit">
+        </div>
+        
+      </div>      
+
+    </section>
+
+    <footer class="d-flex flex-row-reverse">
+      <nav class="navbar fixed-bottom bg-body-tertiary border px-4">
+        <div>
+          <i class="bi bi-instagram m-2"></i>
+          <i class="bi bi-facebook m-2"></i>
+          <i class="bi bi-whatsapp m-2"></i>
+        </div>
+      </nav>
+      <div class="fixed-bottom px-3 fs-4">
+        <p class=" d-flex flex-row-reverse">
+          Cohort
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
