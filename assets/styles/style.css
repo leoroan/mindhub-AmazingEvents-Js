@@ -57,3 +57,7 @@ body {
 .bi-search{
   color: white;
 }
+
+.form-check-input {
+  border-color: #e0046c;
+}
