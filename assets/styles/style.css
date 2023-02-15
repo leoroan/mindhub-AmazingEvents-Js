@@ -12,9 +12,14 @@ a {
 }
 
 .carousel-item p {
-  font-size: 50px;
+  font-size: 75px;
   font-style: italic;
+  color: #e0046c;
+  font-weight: bold;
+
 }
+
+.carousel-control-prev-icon {}
 
 footer .bi {
   font-size: 1.5rem;
