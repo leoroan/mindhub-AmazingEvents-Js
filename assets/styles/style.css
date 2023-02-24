@@ -3,7 +3,7 @@
 }
 
 a {
-  text-decoration:none;
+  text-decoration: none;
   color: #e0046c;
 }
 
@@ -19,24 +19,20 @@ a {
 
 }
 
-.carousel-control-prev-icon {}
-
 footer .bi {
   font-size: 1.5rem;
   color: #e0046c;
 }
 
-.btn-outline-danger{
-  color: white !important;  
-  
-  
+.btn-outline-danger {
+  color: white !important;
 }
 
 body {
   background-color: azure;
 }
 
-.btn-outline-danger:hover{
+.btn-outline-danger:hover {
   background-color: pink;
   opacity: 0.3;
 }
@@ -50,6 +46,10 @@ body {
   border-color: #e0046c;
 }
 
+.card .card-title {
+  color: #e0046c;
+}
+
 .row {
   margin: 50px 0 50px 0;
 
@@ -59,7 +59,7 @@ body {
   border-color: #e0046c;
 }
 
-.bi-search{
+.bi-search {
   color: white;
 }
 
@@ -71,6 +71,15 @@ th {
   background-color: #e0046c !important;
 }
 
-tbody, td, tfoot, th, thead, tr {
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
   border-color: #e0046c;
+}
+
+img {
+  height: 125px;
 }
