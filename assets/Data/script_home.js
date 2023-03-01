@@ -1,11 +1,9 @@
 
 let contenedorDeTarjetas = document.getElementById("cardContainer");
-// console.log(contenedorDeTarjetas);
-
 let tarjetasDeEventos = ``;
 
-for(let event of data.events){
-  tarjetasDeEventos = `
+function createCard(event){
+  return `
   <div class="col">
   <div class="card text-center shadow h-100">
     <img src=${event.image} class="card-img-top shadow" alt="${event.name}">
@@ -20,21 +18,25 @@ for(let event of data.events){
   </div>
   </div>
   `
-    contenedorDeTarjetas.innerHTML += tarjetasDeEventos;
-
-    
 }
 
+for (let event of data.events) {
+    tarjetasDeEventos = createCard(event);
+    contenedorDeTarjetas.innerHTML += tarjetasDeEventos;
+}
 
-// BACKP
-// for(let event of data.events){
-//     let currentDate = new Date(data.currentDate);
-//     let eventDate = new Date(event.date);
+document.getElementById("myInputTextSearch").onkeyup = function() {mySearchFunction()};
 
-//     if (eventDate < currentDate) {
-//         console.log("evento pasado")
-//     } else {
-//         console.log("evento futuro")
-//     }
-// }
+function mySearchFunction(){
+  contenedorDeTarjetas.innerHTML = "";
+  input = document.getElementById("myInputTextSearch");
+  filter = input.value.toLowerCase();
+  miArray = data.events;
+  let busqueda = miArray.filter( elem => elem.name.toLowerCase().includes(filter));
+  for(let event of busqueda){
+    tarjetasDeEventos = createCard(event);
+    contenedorDeTarjetas.innerHTML += tarjetasDeEventos;  
+  }
+
+}
 
