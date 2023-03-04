@@ -24,3 +24,17 @@ function createCheckbox(event, pos) {
   </div>
   `
 }
+
+
+function createNotFound(event, pos) {
+  return `
+  <div class="card text-center mb-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Sory!</h5>
+    <p class="card-text">Your search didn't get anything!</p>
+    <p class="card-text">Try writting anything else</p>
+    <p class="card-text">also you can search by category</p>
+  </div>
+</div>
+  `
+}
