@@ -9,7 +9,7 @@ function createCard(event) {
     </div>
     <div class="d-flex justify-content-around align-items-baseline text-nowrap ">
         <p class="text-center mx-2">Price $ ${event.price}</p>
-        <a href="./details.html" class="btn btn-sm btn-secondary shadow fixed botom">Ver más</a>
+        <a href="./details.html?id=${event._id}" class="btn btn-sm btn-secondary shadow fixed botom">Details</a>
       </div>
   </div>
   </div>
