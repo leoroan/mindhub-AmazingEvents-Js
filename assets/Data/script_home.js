@@ -29,6 +29,12 @@ for (const check of checkboxes) {
 
 document.getElementById("myInputTextSearch").onkeyup = function () { mySearchFunction() };
 
+function drawCard(unArray){
+  for (let event of unArray) {
+    contenedorDeTarjetas.innerHTML += createCard(event);
+  }
+}
+
 function mySearchFunction() {
   contenedorDeTarjetas.innerHTML = "";
   input = document.getElementById("myInputTextSearch");
@@ -36,14 +42,10 @@ function mySearchFunction() {
   miArray = data.events;
   if (seleccion.length == 0) {
     let busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado)));
-    for (let event of busqueda) {
-      contenedorDeTarjetas.innerHTML += createCard(event);
-    }
+    drawCard(busqueda);
   } else {
     let busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado) && seleccion.includes(elem.category)));
-    for (let event of busqueda) {
-      contenedorDeTarjetas.innerHTML += createCard(event);
-    }
+    drawCard(busqueda);
   }
 }
 
