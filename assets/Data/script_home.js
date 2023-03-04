@@ -1,5 +1,3 @@
-
-
 let contenedorDeTarjetas = document.getElementById("cardContainer");
 let tarjetasDeEventos = ``;
 
@@ -10,12 +8,12 @@ arrayDeCategorias = [];
 for (let event of data.events) {
   if (!arrayDeCategorias.includes(event.category)) {
     arrayDeCategorias.push(event.category);
-    checkDeCategorias = createCheckbox(event, arrayDeCategorias.length);
-    contenedorDeCheckboxes.innerHTML += checkDeCategorias;
+    contenedorDeCheckboxes.innerHTML += createCheckbox(event, arrayDeCategorias.length);
   }
 }
 
 let seleccion = [];
+
 let checkboxes = document.querySelectorAll('input[type=checkbox]');
 for (const check of checkboxes) {
   check.addEventListener('click', (e) => {
@@ -25,20 +23,8 @@ for (const check of checkboxes) {
         seleccion.push(checki.value);
       }
     });
-    updateCards();
-  })
-}
-
-function updateCards() {
-  contenedorDeTarjetas.innerHTML = "";
-  for (let event of data.events) {
-    if (seleccion.includes(event.category)) {
-      contenedorDeTarjetas.innerHTML += createCard(event);
-    } 
-  }
-  if (seleccion.length === 0) {
     mySearchFunction();
-  }
+  })
 }
 
 document.getElementById("myInputTextSearch").onkeyup = function () { mySearchFunction() };
@@ -48,15 +34,27 @@ function mySearchFunction() {
   input = document.getElementById("myInputTextSearch");
   filtrado = input.value.toLowerCase();
   miArray = data.events;
-  let busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado) && elem.category.includes(seleccion)));
-  for (let event of busqueda) {
-    tarjetasDeEventos = createCard(event);
-    contenedorDeTarjetas.innerHTML += tarjetasDeEventos;
+  if (seleccion.length == 0) {
+    let busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado)));
+    for (let event of busqueda) {
+      contenedorDeTarjetas.innerHTML += createCard(event);
+    }
+  } else {
+    let busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado) && seleccion.includes(elem.category)));
+    for (let event of busqueda) {
+      contenedorDeTarjetas.innerHTML += createCard(event);
+    }
   }
-
 }
 
-document.addEventListener("load", mySearchFunction());
+function fill() {
+  if (seleccion.indexOf() == -1) {
+    for (const event of data.events) {
+      contenedorDeTarjetas.innerHTML += createCard(event);
+    }
+  }
+}
 
 
+document.onload = fill();
 
