@@ -9,16 +9,16 @@ let contenedorDeCheckboxes = document.getElementById("checkboxContainer");
 let checkDeCategorias = ``;
 
 // Inicializo un arreglo para alojar categorias.
-arrayDeCategorias = [];
+let arrayDeCategorias = [];
 
 /* 
 Por cada evento de nuestra "data", si la categoria actual no se encuentra incluida
 en el arreglo, la agrego y por último creamos un checkbox con los datos de ese evento.
-*/ 
+*/
 for (let event of data.events) {
   if (!arrayDeCategorias.includes(event.category)) {
     arrayDeCategorias.push(event.category);
-    contenedorDeCheckboxes.innerHTML += createCheckbox(event, arrayDeCategorias.length);
+    contenedorDeCheckboxes.innerHTML += createCheckbox(event, arrayDeCategorias.length); //
   }
 }
 
@@ -54,7 +54,7 @@ document.getElementById("myInputTextSearch").onkeyup = function () { mySearchFun
  * Crea tarjetas con los datos obtenidos y las agrega al contenedor
  * @param {array[]} unArray - resultado de la busqueda en mis datos.
  */
-function drawCard(unArray){
+function drawCard(unArray) { //string acumulador de tarjetas, asi evitar el multiple acceso del dom...
   for (let event of unArray) {
     contenedorDeTarjetas.innerHTML += createCard(event);
   }
@@ -69,35 +69,31 @@ function mySearchFunction() {
   input = document.getElementById("myInputTextSearch");
   filtrado = input.value.toLowerCase();
   miArray = data.events;
+  let busqueda;
   if (seleccion.length == 0) {
-    let busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado)));
-    if (busqueda.length != 0){
-      drawCard(busqueda);
-    } else {
-      contenedorDeTarjetas.innerHTML += createNotFound();
-    }
+    busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado)));
   } else {
-    let busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado) && seleccion.includes(elem.category)));
-    if (busqueda.length != 0){
-      drawCard(busqueda);
-    } else {
-      contenedorDeTarjetas.innerHTML += createNotFound();
-    }
+    busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado) && seleccion.includes(elem.category)));
+  }
+  if (busqueda.length != 0) {
+    drawCard(busqueda);
+  } else {
+    contenedorDeTarjetas.innerHTML += createNotFound();
   }
 }
 
 /**
  * Funcion generica para el completado de tarjetas sin filtros.
  */
-function fill() {
-  if (seleccion.indexOf() == -1) {
-    for (const event of data.events) {
-      contenedorDeTarjetas.innerHTML += createCard(event);
-    }
-  }
-}
+// function fill() {
+//   if (seleccion.indexOf() == -1) {
+//     for (const event of data.events) {
+//       contenedorDeTarjetas.innerHTML += createCard(event);
+//     }
+//   }
+// }
 
 
 // Al cargar la pagina la completo con todas las tarjetas de "data".
-document.onload = fill();
+document.onload = drawCard(data.events);
 
