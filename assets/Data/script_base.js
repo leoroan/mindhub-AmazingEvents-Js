@@ -38,3 +38,18 @@ function createNotFound(event, pos) {
 </div>
   `
 }
+
+// Task4M2 data with API;
+miApi = "https://mindhub-xj03.onrender.com/api/amazing";
+
+async function getData() {
+  try {
+    await fetch(miApi)
+      .then(response => response.json())
+      .then(json => data = json);
+      document.getElementById("loader").style.display = "none";
+  } catch (e) {
+    console.error(`Error al obtener los datos de la API: ${e.message}`);
+  }
+}
+
