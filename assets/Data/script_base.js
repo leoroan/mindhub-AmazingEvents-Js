@@ -25,6 +25,22 @@ function createCheckbox(event, pos) {
   `
 }
 
+function createTabla(event) {
+  return `
+  <td>Name : ${event.name} </td>
+  `
+}
+
+function createAnotherTabla(event,total, percent) {
+  return `
+  <tr>
+  <td>${event.category} </td>
+  <td>$${total} </td>
+  <td>${percent.toFixed(2)}% </td>
+  </tr>
+  `
+}
+
 
 function createNotFound(event, pos) {
   return `
@@ -53,3 +69,13 @@ async function getData() {
   }
 }
 
+/**
+   * 
+   * @param {object} event evento gral del "data"
+   * @returns Boolean, true si la fecha del evento es inferior a la fecha actual (DATA)
+   */
+function dateIsPast(event) {
+  let currentDate = new Date(data.currentDate);
+  let eventDate = new Date(event.date);
+  return eventDate < currentDate;
+}

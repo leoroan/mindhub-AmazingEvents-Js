@@ -93,3 +93,15 @@ img {
   color: #e0046c;
   font-size: xx-large;
 }
+
+.laTabla{
+  margin-bottom: 100px;
+}
+
+#checkboxContainer{
+  font-size: 20px;
+}
+
+.bannerText{
+  text-shadow: 2px 2px 6px black;
+}

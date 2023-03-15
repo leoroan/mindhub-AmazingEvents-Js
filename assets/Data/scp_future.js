@@ -19,7 +19,7 @@ async function work() {
   en el arreglo, la agrego y por último creamos un checkbox con los datos de ese evento.
   */
   for (let event of data.events) {
-    if (!arrayDeCategorias.includes(event.category)) {
+    if (!arrayDeCategorias.includes(event.category) && !dateIsPast(event)) {
       arrayDeCategorias.push(event.category);
       contenedorDeCheckboxes.innerHTML += createCheckbox(event, arrayDeCategorias.length);
     }
@@ -61,7 +61,7 @@ async function work() {
   function drawCard(unArray) {
     if (unArray.length != 0) {
       for (let event of unArray) {
-        if (checkDate(event)) {
+        if (!dateIsPast(event)) {
           contenedorDeTarjetas.innerHTML += createCard(event);
         }
       }
@@ -69,18 +69,7 @@ async function work() {
       contenedorDeTarjetas.innerHTML += createNotFound();
     }
   }
-
-  /**
-   * 
-   * @param {object} event evento gral del "data"
-   * @returns Boolean, true si la fecha del evento es superior a la fecha actual (DATA)
-   */
-  function checkDate(event) {
-    let currentDate = new Date(data.currentDate);
-    let eventDate = new Date(event.date);
-    return eventDate > currentDate;
-  }
-
+  
   /**
    * Realiza la busqueda en "data" y devuelve las informacion en tarjetas.
    * las mismas filtradas por valores de busqueda o seleccion.
@@ -91,10 +80,10 @@ async function work() {
     filtrado = input.value.toLowerCase();
     miArray = data.events;
     if (seleccion.length == 0) {
-      let busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado) && checkDate(elem)));
+      let busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado) && !dateIsPast(elem)));
       drawCard(busqueda);
     } else {
-      let busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado) && checkDate(elem) && seleccion.includes(elem.category)));
+      let busqueda = miArray.filter(elem => (elem.name.toLowerCase().includes(filtrado) && !dateIsPast(elem) && seleccion.includes(elem.category)));
       drawCard(busqueda);
     }
   }
@@ -105,7 +94,7 @@ async function work() {
   function fill() {
     if (seleccion.indexOf() == -1) {
       for (const event of data.events) {
-        if (checkDate(event)) {
+        if (!dateIsPast(event)) {
           contenedorDeTarjetas.innerHTML += createCard(event);
         }
       }
